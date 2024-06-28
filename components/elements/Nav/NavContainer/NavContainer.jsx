@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import styles from '@/styles/components/elements/navElement.module.scss'
 
-const NavContainer = () => {
+const NavContainer = ({className, children, isOpen}) => {
   return (
-    <div>NavContainer</div>
+    <section className={`${styles['nav_container']} ${styles[className]} ${isOpen && styles.isOpen}`}>
+      {children}
+    </section>
   )
 }
 

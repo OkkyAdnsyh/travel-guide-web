@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import'@/styles/global.scss';
+import Nav from '@/components/modules/Nav/Nav';
 
 const RootLayout = ({children}) => {
   return (
     <html>
       <body>
-        {children}
+        <Nav screen={'mobile'}/> 
+        <main className='wrapper'>
+          {children}
+        </main>
       </body>
     </html>
   )
