@@ -1,3 +1,4 @@
+import Banner from '@/components/blocks/Home/Banner/Banner'
 import React from 'react'
 
 const Home = async () => {
@@ -8,7 +9,9 @@ const Home = async () => {
 
   // console.log(data);
   return (
-    <div>Home</div>
+    <>
+      <Banner />
+    </>
   )
 }
 

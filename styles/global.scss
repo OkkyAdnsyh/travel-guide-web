@@ -15,11 +15,13 @@
     --text-md: 1.6rem;
     --text-sm: 1.2rem;
 
+    --padding-top: calc(4.2rem + 2rem + 1rem);
+
     @media screen and (min-width: 768px) {
         --text-xl: 6rem;
         --text-lg: 3.2rem;
-        --text-md: 1.8rem;
-        --text-sm: 1.6rem;
+
+        --padding-top: calc(3.5rem + 7.8rem);
     }
 
     --primary-gradient: linear-gradient(180deg, rgba(16,17,28,0) 0%, rgba(16,17,28,1) 100%);
@@ -41,6 +43,11 @@ html,
     overflow-x: hidden;
 }
 
+.wrapper{
+    padding-top: var(--padding-top);
+    background: var(--primary-color);
+}
+
 h1,h2,h3,h4,h5,h6,p,b,strong,a,button,input,input::placeholder{
     font-family: var(--primary-font);
     font-optical-sizing: auto;
@@ -50,6 +57,7 @@ button,input,textarea{
     background: transparent;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 button{
