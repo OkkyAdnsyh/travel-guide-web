@@ -1,10 +1,12 @@
 import Nav from '@/component/modules/Nav/Nav'
+import { cookies } from 'next/headers'
 import React from 'react'
 
-const Home = () => {
+const Home = async () => {
+  let username = cookies().get('username')?.value;
   return (
     <>
-      <Nav />
+      <Nav dynamicLink={username}/>
     </>
   )
 }
