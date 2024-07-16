@@ -48,3 +48,19 @@
     font-weight: 500;
     color: var(--text-white);
 }
+.searchbar_container{
+    position: fixed;
+    top: var(--padding-top);
+    background: var(--sec-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 1.6rem;
+    transform: translateY(-100%);
+    transition: transform .3s linear;
+    
+    &.isActive{
+        transform: translateY(0);
+    }
+}
