@@ -1,0 +1,10 @@
+.search{
+    width: 100%;
+    font-size: var(--text-md);
+    color: var(--text-black);
+
+    &::placeholder{
+        font-weight: 600;
+        color: var(--sec-shade-color);
+    }
+}
