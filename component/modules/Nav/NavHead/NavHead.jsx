@@ -4,17 +4,40 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Assets } from '@/component/elements/Assets'
 import { Btn } from '@/component/elements/Btn'
+import { FormControl } from '../../FormControl'
 
 const NavHead = ({screen, openNav, openSearchBar}) => {
   if(screen === 'desktop') return (
-    <p>desktop</p>
+    <header className={styles['nav_head_desktop']}>
+      <Link href={'/'}>
+        <Image src={Assets.Logo} alt='logo' width={114} height={43}/>
+      </Link>
+      <section className={styles['nav_group_wrapper']}>
+        <Btn.CTA href={'auth/sign-in'} content={'Sign In'} type={'main'} />
+        <FormControl.SearchForm />
+        <Btn.Toggle onClick={openNav}>
+          <svg width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_4_5)">
+            <rect x="4" y="0.5" width="24" height="4" rx="2" fill="#E8E9F5"/>
+            <rect y="10.5" width="32" height="4" rx="2" fill="#E8E9F5"/>
+            <rect x="4" y="20.5" width="24" height="4" rx="2" fill="#E8E9F5"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_4_5">
+            <rect width="32" height="24" fill="white" transform="translate(0 0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>
+        </Btn.Toggle>
+      </section>
+    </header>
   )
   if(screen === 'mobile') return (
     <header className={styles['nav_head_mobile']}>
       <Link href={'/'}>
-        <Image src={Assets.Logo} alt='logo' width={103} height={43}/>
+        <Image src={Assets.Logo} alt='logo' width={103} height={43} />
       </Link>
-      <Btn.CTA href={'/auth/sign-in'} content={'Sign In'} type={'main'}/>
+      <Btn.CTA href={'/auth/sign-in'} content={'Sign In'} type={'main'} />
       <div className={styles['btn_group']}>
         <Btn.Toggle onClick={openSearchBar}>
           <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">

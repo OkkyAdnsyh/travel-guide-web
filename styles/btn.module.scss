@@ -1,8 +1,14 @@
 .CTA{
+    @media screen and (min-width: 768px) {
+        padding: 1.6rem 3.6rem;
+        font-size: var(--text-md);
+    }
     padding: 1rem 3.2rem;
     font-size: 1.6rem;
     font-weight: 700;
     border-radius: 999px;
+    width: fit-content;
+    white-space: nowrap;
 }
 
 .CTA_main{
